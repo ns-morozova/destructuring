@@ -2,7 +2,7 @@
 
 export default function extractSpec (special) {
     for (let i = 0; i < special.length; i++) {
-        if (!special[i].hasOwnProperty('description')) {
+        if (!('description' in special[i])) {
             special[i].description = 'Описание недоступно';
         }
     }
